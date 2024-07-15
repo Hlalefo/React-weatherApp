@@ -1,0 +1,17 @@
+/* src/Weather.css */
+.weather {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.weather img {
+    vertical-align: middle;
+}
+
+.weather p {
+    margin: 5px 0;
+}
