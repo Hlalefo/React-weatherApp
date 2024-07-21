@@ -1,21 +1,125 @@
-/* src/App.css */
-.app {
-  text-align: center;
-  padding: 20px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-form {
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  margin-right: 10px;
+.header h1 {
+  font-size: 2.5rem;
+  color: #8da2b8;
+  margin: 0;
 }
 
-button {
-  padding: 10px 20px;
+.main-content {
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 16px;
+  flex: 1;
+}
+
+.search-form button {
+  padding: 10px;
+  border: none;
+  background-color: #757e87;
+  color: #fff;
+  border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-form button:hover {
+  background-color: #586675;
+}
+
+.weather-data {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-data h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.weather-data .description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.weather-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.weather-info .current-weather {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-info .forecast {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-info .forecast .forecast-day {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-info .forecast img {
+  width: 64px;
+  height: 64px;
+}
+
+.unit-toggle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.unit-toggle button {
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #929ca7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.unit-toggle button:hover {
+  background-color: #8b8d8f;
 }

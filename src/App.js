@@ -1,7 +1,7 @@
-// src/App.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import Weather from './Weather';
+import Greeting from './Greeting';
 import './App.css';
 
 const App = () => {
@@ -21,15 +21,23 @@ const App = () => {
     <div className="app">
       <h1>Weather App</h1>
       <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Enter city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <button type="submit">Search</button>
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Type a city.."
+            className="form-control"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button type="submit" className="btn btn-primary">Search</button>
+        </div>
       </form>
-      {weatherData && <Weather data={weatherData} />}
+      {weatherData && (
+        <>
+          <Greeting data={weatherData} />
+          <Weather data={weatherData} />
+        </>
+      )}
     </div>
   );
 };
